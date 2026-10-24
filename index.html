@@ -1,0 +1,3048 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neon Pulse - evoX Canlı GIF İkon Galerisi (100 Hareketli İkon)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #07090e;
+    --surface: #0f121c;
+    --surface-hover: #161b2a;
+    --surface-active: #1e2438;
+    --border: #1f2538;
+    --border-hover: #2e3752;
+    --border-glow: rgba(0, 229, 255, 0.4);
+    --cyan: #00e5ff;
+    --cyan-glow: rgba(0, 229, 255, 0.25);
+    --pink: #ff3cc8;
+    --pink-glow: rgba(255, 60, 200, 0.25);
+    --gold: #ffcd05;
+    --green: #3cff8c;
+    --green-glow: rgba(60, 255, 140, 0.25);
+    --red: #ff4664;
+    --red-glow: rgba(255, 70, 100, 0.25);
+    --violet: #aa6eff;
+    --text: #f8fafc;
+    --text-dim: #cbd5e1;
+    --muted: #8490a6;
+  }
+  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 32px 24px 120px;
+    background-image: 
+      radial-gradient(circle at 10% 10%, rgba(0, 229, 255, 0.08) 0%, transparent 45%),
+      radial-gradient(circle at 90% 20%, rgba(255, 60, 200, 0.07) 0%, transparent 45%),
+      radial-gradient(circle at 50% 80%, rgba(60, 255, 140, 0.05) 0%, transparent 50%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .container { max-width: 1480px; margin: 0 auto; }
+
+  /* Top Bar & Header */
+  header {
+    text-align: center;
+    margin-bottom: 36px;
+    position: relative;
+  }
+  
+  .badge-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  
+  .badge-neon {
+    background: rgba(0, 229, 255, 0.12);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+    color: var(--cyan);
+    box-shadow: 0 0 16px var(--cyan-glow);
+  }
+  
+  .badge-green {
+    background: rgba(60, 255, 140, 0.12);
+    border: 1px solid rgba(60, 255, 140, 0.4);
+    color: var(--green);
+  }
+  
+  .badge-pink {
+    background: rgba(255, 60, 200, 0.12);
+    border: 1px solid rgba(255, 60, 200, 0.4);
+    color: var(--pink);
+  }
+  
+  h1 {
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #ffffff 30%, var(--cyan) 75%, var(--pink) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .subtitle {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 780px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+  }
+  
+  .top-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  
+  .btn-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #121624;
+    border: 1px solid #28324a;
+    color: var(--text-dim);
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .btn-top:hover {
+    background: #1b2136;
+    color: #fff;
+    border-color: var(--cyan);
+    box-shadow: 0 0 18px var(--cyan-glow);
+    transform: translateY(-2px);
+  }
+  
+  .btn-top-accent {
+    background: linear-gradient(135deg, rgba(0, 229, 255, 0.2), rgba(255, 60, 200, 0.2));
+    border-color: rgba(0, 229, 255, 0.5);
+    color: #fff;
+  }
+
+  /* Interactive Stream Deck Simulator */
+  .deck-section {
+    background: linear-gradient(160deg, #131724 0%, #0a0c14 100%);
+    border: 1px solid #232a3f;
+    border-radius: 24px;
+    padding: 28px;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  }
+  
+  .deck-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .deck-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .deck-title h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.3px;
+  }
+  
+  .deck-hint {
+    font-size: 13px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2px;
+  }
+  
+  .deck-presets {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-preset {
+    background: #161c2d;
+    border: 1px solid #2a344d;
+    color: #cbd5e1;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .btn-preset:hover {
+    background: #202840;
+    color: #fff;
+    border-color: var(--cyan);
+  }
+  
+  /* Deck Chassis */
+  .deck-center {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+  }
+  
+  .device-chassis {
+    background: radial-gradient(circle at 50% 15%, #181d2e 0%, #080a10 100%);
+    border: 2px solid #28324a;
+    border-radius: 24px;
+    padding: 24px 28px;
+    box-shadow: 0 24px 50px rgba(0, 0, 0, 0.8), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  
+  .deck-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 96px);
+    grid-template-rows: repeat(2, 96px);
+    gap: 16px;
+  }
+  
+  @media (max-width: 768px) {
+    .deck-grid {
+      grid-template-columns: repeat(3, 88px);
+      grid-template-rows: repeat(4, 88px);
+    }
+  }
+  
+  .deck-key {
+    width: 96px;
+    height: 96px;
+    background: #080a11;
+    border: 2px solid #1a2030;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    user-select: none;
+    transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0 0 14px rgba(0,0,0,0.85), 0 4px 12px rgba(0,0,0,0.5);
+  }
+  
+  @media (max-width: 768px) {
+    .deck-key { width: 88px; height: 88px; }
+  }
+  
+  .deck-key:hover {
+    border-color: var(--cyan);
+    box-shadow: 0 0 22px var(--cyan-glow), inset 0 0 10px rgba(0, 229, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
+  .deck-key:active, .deck-key.pressing {
+    transform: scale(0.94);
+    border-color: var(--pink);
+    box-shadow: 0 0 24px var(--pink-glow);
+  }
+  
+  .deck-key.selected {
+    border-color: var(--cyan);
+    box-shadow: 0 0 20px var(--cyan-glow);
+  }
+  
+  .deck-key img {
+    width: 62px;
+    height: 62px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 10px rgba(0,0,0,0.7));
+    pointer-events: none;
+  }
+  
+  .deck-key-label {
+    position: absolute;
+    bottom: 5px;
+    font-size: 9px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.75);
+    text-shadow: 0 1px 3px #000;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    max-width: 86px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+  
+  .deck-key-toggle-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .badge-on { background: var(--green); box-shadow: 0 0 8px var(--green); }
+  .badge-off { background: var(--red); box-shadow: 0 0 8px var(--red); }
+
+  /* Filter & Search Bar */
+  .filter-section {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 22px 26px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .filter-top {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .search-wrapper {
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 14px 20px 14px 48px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: #090c14;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s;
+  }
+  
+  .search-input:focus {
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.15);
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    font-size: 18px;
+    pointer-events: none;
+  }
+  
+  .counter-pill {
+    font-size: 13px;
+    color: var(--muted);
+    font-weight: 600;
+    background: #141926;
+    padding: 10px 18px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    white-space: nowrap;
+  }
+  .counter-pill strong { color: var(--cyan); }
+  
+  /* Filter Tabs */
+  .tabs-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tab-btn {
+    padding: 8px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: #0d101a;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  
+  .tab-btn:hover {
+    background: var(--surface-hover);
+    color: #fff;
+    border-color: var(--border-hover);
+  }
+  
+  .tab-btn.active {
+    background: rgba(0, 229, 255, 0.15);
+    color: var(--cyan);
+    border-color: var(--cyan);
+    box-shadow: 0 0 16px var(--cyan-glow);
+  }
+
+  /* Quick Suggestion Chips */
+  .chips-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  
+  .chip {
+    padding: 4px 10px;
+    background: #131724;
+    border: 1px solid #22293d;
+    border-radius: 6px;
+    color: var(--text-dim);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .chip:hover {
+    background: #1d2338;
+    color: var(--cyan);
+    border-color: var(--cyan);
+  }
+
+  /* Main Gallery Grid */
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+    gap: 16px;
+  }
+  
+  .icon-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 14px 10px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+  
+  .icon-card:hover {
+    transform: translateY(-4px);
+    background: var(--surface-hover);
+    border-color: rgba(0, 229, 255, 0.5);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 20px var(--cyan-glow);
+  }
+  
+  .img-wrapper {
+    width: 86px;
+    height: 86px;
+    background: #080a11;
+    border: 1px solid #1a2030;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.85);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .img-wrapper img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+  }
+  
+  .icon-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #e2e8f0;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 6px;
+    max-width: 100%;
+    word-break: break-word;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .state-pill {
+    font-size: 9px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 6px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .state-on {
+    background: rgba(60, 255, 140, 0.15);
+    color: var(--green);
+    border: 1px solid rgba(60, 255, 140, 0.4);
+  }
+  
+  .state-off {
+    background: rgba(255, 70, 100, 0.15);
+    color: var(--red);
+    border: 1px solid rgba(255, 70, 100, 0.4);
+  }
+  
+  .state-loop {
+    background: rgba(0, 229, 255, 0.15);
+    color: var(--cyan);
+    border: 1px solid rgba(0, 229, 255, 0.4);
+  }
+  
+  /* Card Overlay Actions */
+  .card-actions {
+    display: flex;
+    gap: 4px;
+    margin-top: 8px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .icon-card:hover .card-actions {
+    opacity: 1;
+  }
+  
+  .btn-card-act {
+    background: #141926;
+    border: 1px solid #28334d;
+    color: var(--text-dim);
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn-card-act:hover {
+    background: #1e263a;
+    color: #fff;
+    border-color: var(--cyan);
+  }
+  
+  .btn-card-toggle {
+    background: rgba(0, 229, 255, 0.12);
+    border-color: rgba(0, 229, 255, 0.4);
+    color: var(--cyan);
+  }
+
+  /* Modal Preview */
+  .modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    padding: 20px;
+  }
+  
+  .modal-box {
+    background: #0f121d;
+    border: 1px solid #28334d;
+    border-radius: 24px;
+    max-width: 500px;
+    width: 100%;
+    padding: 28px;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.9), 0 0 30px var(--cyan-glow);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #161b2a;
+    border: 1px solid #28334d;
+    color: var(--muted);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.15s;
+  }
+  .modal-close:hover { background: #242c44; color: #fff; }
+  
+  .modal-preview-stage {
+    width: 256px;
+    height: 256px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0 20px;
+    border: 2px solid #242c44;
+    background: #000;
+    transition: background 0.2s;
+    box-shadow: inset 0 0 24px rgba(0,0,0,0.9), 0 10px 30px rgba(0,0,0,0.5);
+  }
+  
+  .modal-preview-stage img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+  }
+  
+  .bg-switcher {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .bg-dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #334155;
+    transition: all 0.15s;
+  }
+  .bg-dot.active { border-color: var(--cyan); transform: scale(1.15); }
+  
+  .modal-info {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    background: #080a10;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid #1a2030;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* Guide Section */
+  .guide-card {
+    background: linear-gradient(145deg, #121624, #0b0d14);
+    border: 1px solid #232a3f;
+    border-radius: 20px;
+    padding: 28px;
+    margin-top: 48px;
+  }
+  
+  .guide-title {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+  }
+  
+  .guide-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  
+  .guide-step {
+    background: #090c14;
+    border: 1px solid #1b2133;
+    border-radius: 14px;
+    padding: 18px;
+  }
+  
+  .guide-step-num {
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--cyan);
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .guide-step-text {
+    font-size: 13px;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* Toast Notification */
+  .toast {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    background: #141926;
+    border: 1px solid var(--cyan);
+    color: #fff;
+    padding: 14px 24px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8), 0 0 24px var(--cyan-glow);
+    display: none;
+    align-items: center;
+    gap: 10px;
+    z-index: 99999;
+    animation: toastPop 0.25s ease-out;
+  }
+  
+  @keyframes toastPop {
+    from { opacity: 0; transform: translateY(20px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <!-- Header -->
+  <header>
+    <div class="badge-row">
+      <span class="badge badge-neon">⚡ evoX &amp; Stream Deck Suite</span>
+      <span class="badge badge-green">● 100 Canlı GIF İkonu</span>
+      <span class="badge badge-pink">★ Pürüzsüz Sonsuz Döngü</span>
+    </div>
+    <h1>Neon Pulse Canlı GIF Galerisi</h1>
+    <p class="subtitle">
+      evoX cihazı ve uygulaması için özel olarak tasarlanan 100 adet hareketli neon GIF ikonunu canlı olarak inceleyin. 
+      Aşağıdaki <strong>Stream Deck Simülatörü</strong>'ne tıklayarak gerçek cihaz tuşundaki görünümünü ve Açık/Kapalı geçişlerini hemen test edebilirsiniz!
+    </p>
+
+    <div class="top-actions">
+      <a href="Neon Pulse Icons.evoxpack" download class="btn-top btn-top-accent">
+        <span>📦</span> evoX Paketini İndir (.evoxpack)
+      </a>
+      <a href="icons_sheet.png" target="_blank" class="btn-top">
+        <span>🖼️</span> 10x10 Tam Tabloyu Gör (PNG)
+      </a>
+      <button class="btn-top" onclick="copyEvoxPath()">
+        <span>📋</span> evoX Klasör Yolunu Kopyala
+      </button>
+    </div>
+  </header>
+
+  <!-- Stream Deck Interactive Simulator -->
+  <section class="deck-section">
+    <div class="deck-header">
+      <div class="deck-title">
+        <span style="font-size: 28px;">🎮</span>
+        <div>
+          <h2>Canlı evoX / Stream Deck Simülatörü</h2>
+          <span class="deck-hint">
+            💡 Galeriden bir ikona tıklayarak tuşa atayın &bull; Atanmış Açık/Kapalı tuşuna basarak canlı durumu (ON ↔ OFF) değiştirin!
+          </span>
+        </div>
+      </div>
+      <div class="deck-presets">
+        <button class="btn-preset" onclick="resetDeckPreset('streamer')">🎙️ Yayıncı Seti</button>
+        <button class="btn-preset" onclick="resetDeckPreset('gaming')">⚡ Oyun &amp; Espor</button>
+        <button class="btn-preset" onclick="resetDeckPreset('media')">🎵 Medya Seti</button>
+        <button class="btn-preset" onclick="resetDeckPreset('system')">⚙️ Sistem Seti</button>
+        <button class="btn-preset" onclick="clearDeck()">🗑️ Temizle</button>
+      </div>
+    </div>
+
+    <div class="deck-center">
+      <div class="device-chassis">
+        <div class="deck-grid" id="deckGrid">
+          <!-- 12 Keys generated by JavaScript -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Search Bar -->
+  <section class="filter-section">
+    <div class="filter-top">
+      <div class="search-wrapper">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="searchInput" class="search-input" placeholder="İkon ara (örn: mic, ses, canlı yayın, discord, wifi, kamera, pil)..." oninput="filterGallery()">
+      </div>
+      <div class="counter-pill">
+        Gösterilen: <strong id="visibleCount">100</strong> / 100 İkon
+      </div>
+    </div>
+
+    <div class="tabs-row" id="categoryTabs">
+      <button class="tab-btn active" onclick="setCategory('all', this)">Tümü (100)</button>
+      <button class="tab-btn" onclick="setCategory('toggle', this)">🔄 Açık / Kapalı Çiftleri (44)</button>
+      <button class="tab-btn" onclick="setCategory('stream', this)">🎙️ Yayın &amp; OBS</button>
+      <button class="tab-btn" onclick="setCategory('media', this)">🎵 Medya &amp; Ses</button>
+      <button class="tab-btn" onclick="setCategory('system', this)">⚙️ Sistem &amp; Araçlar</button>
+      <button class="tab-btn" onclick="setCategory('game', this)">🎮 Oyun &amp; Eğlence</button>
+      <button class="tab-btn" onclick="setCategory('brand', this)">🌐 Markalar</button>
+    </div>
+
+    <div class="chips-row">
+      <span style="font-weight: 700; color: #fff;">Hızlı Ara:</span>
+      <span class="chip" onclick="quickSearch('mic')">🎙️ mic</span>
+      <span class="chip" onclick="quickSearch('live')">🔴 live</span>
+      <span class="chip" onclick="quickSearch('camera')">📹 camera</span>
+      <span class="chip" onclick="quickSearch('volume')">🔊 volume</span>
+      <span class="chip" onclick="quickSearch('discord')">💬 discord</span>
+      <span class="chip" onclick="quickSearch('twitch')">🟣 twitch</span>
+      <span class="chip" onclick="quickSearch('gamepad')">🎮 gamepad</span>
+      <span class="chip" onclick="quickSearch('battery')">🔋 battery</span>
+      <span class="chip" onclick="quickSearch('wifi')">📶 wifi</span>
+      <span class="chip" onclick="quickSearch('lock')">🔒 lock</span>
+      <span class="chip" onclick="quickSearch('')">✖ Temizle</span>
+    </div>
+  </section>
+
+  <!-- Main Grid -->
+  <main class="gallery-grid" id="galleryGrid">
+    <!-- Populated by JavaScript -->
+  </main>
+
+  <!-- Guide / How to use with evoX -->
+  <section class="guide-card">
+    <div class="guide-title">
+      <span>🚀</span> evoX Masaüstü Uygulaması ile Kullanım Rehberi
+    </div>
+    <div class="guide-steps">
+      <div class="guide-step">
+        <div class="guide-step-num">1. Paket Dosyasını Edinin</div>
+        <div class="guide-step-text">
+          Yukarıdaki <strong>"evoX Paketini İndir"</strong> butonuna tıklayarak <code>Neon Pulse Icons.evoxpack</code> arşivini bilgisayarınıza kaydedin.
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="guide-step-num">2. evoX Uygulamasına Tanıtın</div>
+        <div class="guide-step-text">
+          evoX uygulamasında <strong>Icon Library ➔ Import Pack</strong> diyerek paketi seçin ya da doğrudan <code>%APPDATA%\evoX\icons</code> dizinine çıkartın.
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="guide-step-num">3. Tuşlara Atayın &amp; Keyfini Çıkarın</div>
+        <div class="guide-step-text">
+          evoX arayüzünde "Neon Pulse Icons" sekmesinden istediğiniz ikonu cihazınızın tuşlarına sürükleyip bırakın. Açık ve Kapalı durumlarını kolayca eşleyin!
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Modal Detail Inspector -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <h3 id="modalTitle" style="font-size: 20px; font-weight: 800; color: #fff; margin-bottom: 4px;">İkon Adı</h3>
+    <span id="modalCategory" class="state-pill state-loop" style="margin-bottom: 12px;">DÖNGÜ</span>
+
+    <div class="modal-preview-stage" id="modalStage">
+      <img id="modalImg" src="" alt="Preview">
+    </div>
+
+    <div class="bg-switcher">
+      <div class="bg-dot active" style="background: #000000;" onclick="changeModalBg('#000000', this)" title="OLED Siyah"></div>
+      <div class="bg-dot" style="background: #0f121d;" onclick="changeModalBg('#0f121d', this)" title="Koyu Lacivert"></div>
+      <div class="bg-dot" style="background: #1e2438;" onclick="changeModalBg('#1e2438', this)" title="Stream Deck Gri"></div>
+      <div class="bg-dot" style="background: #f1f5f9;" onclick="changeModalBg('#f1f5f9', this)" title="Açık Mod"></div>
+    </div>
+
+    <div class="modal-info" id="modalInfo">
+      256x256 px &bull; 36 Kare @ 40ms &bull; Kusursuz Döngü
+    </div>
+
+    <div style="display: flex; gap: 10px; width: 100%;">
+      <button class="btn-top btn-top-accent" style="flex: 1; justify-content: center;" id="modalDownloadBtn">
+        💾 GIF İndir
+      </button>
+      <button class="btn-top" style="flex: 1; justify-content: center;" id="modalAssignBtn">
+        🎮 Simülatöre Ata
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast Box -->
+<div class="toast" id="toastBox">
+  <span id="toastIcon">✨</span>
+  <span id="toastMsg">İşlem yapıldı!</span>
+</div>
+
+<script>
+  // Icon Database
+  const ICONS = [
+  {
+    "id": "airplane_off",
+    "filename": "airplane_off.gif",
+    "core": "airplane",
+    "title": "Uçak Modu (Kapalı)",
+    "title_base": "Uçak Modu",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "airplane_on",
+    "twin_file": "airplane_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 12.6,
+    "rel_path": "icons/airplane_off.gif",
+    "keywords": "ucak airplane mode seyahat flight ucus airplane airplane_off uçak modu (kapalı)"
+  },
+  {
+    "id": "airplane_on",
+    "filename": "airplane_on.gif",
+    "core": "airplane",
+    "title": "Uçak Modu (Açık)",
+    "title_base": "Uçak Modu",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "airplane_off",
+    "twin_file": "airplane_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 288.4,
+    "rel_path": "icons/airplane_on.gif",
+    "keywords": "ucak airplane mode seyahat flight ucus airplane airplane_on uçak modu (açık)"
+  },
+  {
+    "id": "battery",
+    "filename": "battery.gif",
+    "core": "battery",
+    "title": "Pil Durumu",
+    "title_base": "Pil Durumu",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 374.2,
+    "rel_path": "icons/battery.gif",
+    "keywords": "pil battery batarya sarj guc enerji seviye battery battery pil durumu"
+  },
+  {
+    "id": "bell_off",
+    "filename": "bell_off.gif",
+    "core": "bell",
+    "title": "Bildirim Zili (Kapalı)",
+    "title_base": "Bildirim Zili",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "bell_on",
+    "twin_file": "bell_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 11.9,
+    "rel_path": "icons/bell_off.gif",
+    "keywords": "zil bell bildirim notification alert alarm uyar bell bell_off bildirim zili (kapalı)"
+  },
+  {
+    "id": "bell_on",
+    "filename": "bell_on.gif",
+    "core": "bell",
+    "title": "Bildirim Zili (Açık)",
+    "title_base": "Bildirim Zili",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "bell_off",
+    "twin_file": "bell_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 270.8,
+    "rel_path": "icons/bell_on.gif",
+    "keywords": "zil bell bildirim notification alert alarm uyar bell bell_on bildirim zili (açık)"
+  },
+  {
+    "id": "bluetooth_off",
+    "filename": "bluetooth_off.gif",
+    "core": "bluetooth",
+    "title": "Bluetooth (Kapalı)",
+    "title_base": "Bluetooth",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "bluetooth_on",
+    "twin_file": "bluetooth_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 12.8,
+    "rel_path": "icons/bluetooth_off.gif",
+    "keywords": "bluetooth bt kablosuz wireless baglanti eslesme bluetooth bluetooth_off bluetooth (kapalı)"
+  },
+  {
+    "id": "bluetooth_on",
+    "filename": "bluetooth_on.gif",
+    "core": "bluetooth",
+    "title": "Bluetooth (Açık)",
+    "title_base": "Bluetooth",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "bluetooth_off",
+    "twin_file": "bluetooth_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 493.5,
+    "rel_path": "icons/bluetooth_on.gif",
+    "keywords": "bluetooth bt kablosuz wireless baglanti eslesme bluetooth bluetooth_on bluetooth (açık)"
+  },
+  {
+    "id": "bolt",
+    "filename": "bolt.gif",
+    "core": "bolt",
+    "title": "Yıldırım Turbo",
+    "title_base": "Yıldırım Turbo",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 146.8,
+    "rel_path": "icons/bolt.gif",
+    "keywords": "yildirim bolt simsek elektrik enerji flash turbo yildiz bolt bolt yıldırım turbo"
+  },
+  {
+    "id": "bookmark",
+    "filename": "bookmark.gif",
+    "core": "bookmark",
+    "title": "Yer İmi",
+    "title_base": "Yer İmi",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 299.9,
+    "rel_path": "icons/bookmark.gif",
+    "keywords": "yer imi bookmark kaydet favori isaret bookmark bookmark yer i̇mi"
+  },
+  {
+    "id": "bulb_off",
+    "filename": "bulb_off.gif",
+    "core": "bulb",
+    "title": "Işık / Ampul (Kapalı)",
+    "title_base": "Işık / Ampul",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "bulb_on",
+    "twin_file": "bulb_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 8.3,
+    "rel_path": "icons/bulb_off.gif",
+    "keywords": "ampul bulb isik lamba light fikir idea aydinlatma bulb bulb_off işık / ampul (kapalı)"
+  },
+  {
+    "id": "bulb_on",
+    "filename": "bulb_on.gif",
+    "core": "bulb",
+    "title": "Işık / Ampul (Açık)",
+    "title_base": "Işık / Ampul",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "bulb_off",
+    "twin_file": "bulb_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 358.1,
+    "rel_path": "icons/bulb_on.gif",
+    "keywords": "ampul bulb isik lamba light fikir idea aydinlatma bulb bulb_on işık / ampul (açık)"
+  },
+  {
+    "id": "calendar",
+    "filename": "calendar.gif",
+    "core": "calendar",
+    "title": "Takvim",
+    "title_base": "Takvim",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 39.0,
+    "rel_path": "icons/calendar.gif",
+    "keywords": "takvim calendar tarih date gun ajanda etkinlik calendar calendar takvim"
+  },
+  {
+    "id": "camera_off",
+    "filename": "camera_off.gif",
+    "core": "camera",
+    "title": "Webcam Kamera (Kapalı)",
+    "title_base": "Webcam Kamera",
+    "category": "stream",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "camera_on",
+    "twin_file": "camera_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 12.0,
+    "rel_path": "icons/camera_off.gif",
+    "keywords": "kamera camera webcam goruntu video yayin obs camera camera_off webcam kamera (kapalı)"
+  },
+  {
+    "id": "camera_on",
+    "filename": "camera_on.gif",
+    "core": "camera",
+    "title": "Webcam Kamera (Açık)",
+    "title_base": "Webcam Kamera",
+    "category": "stream",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "camera_off",
+    "twin_file": "camera_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 150.9,
+    "rel_path": "icons/camera_on.gif",
+    "keywords": "kamera camera webcam goruntu video yayin obs camera camera_on webcam kamera (açık)"
+  },
+  {
+    "id": "chart",
+    "filename": "chart.gif",
+    "core": "chart",
+    "title": "İstatistik Grafiği",
+    "title_base": "İstatistik Grafiği",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 322.6,
+    "rel_path": "icons/chart.gif",
+    "keywords": "grafik chart istatistik borsa analiz stats yukselis trend chart chart i̇statistik grafiği"
+  },
+  {
+    "id": "chat_off",
+    "filename": "chat_off.gif",
+    "core": "chat",
+    "title": "Yayın Sohbeti (Kapalı)",
+    "title_base": "Yayın Sohbeti",
+    "category": "stream",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "chat_on",
+    "twin_file": "chat_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 10.8,
+    "rel_path": "icons/chat_off.gif",
+    "keywords": "sohbet chat mesaj message discord twitch yorum chatbox chat chat_off yayın sohbeti (kapalı)"
+  },
+  {
+    "id": "chat_on",
+    "filename": "chat_on.gif",
+    "core": "chat",
+    "title": "Yayın Sohbeti (Açık)",
+    "title_base": "Yayın Sohbeti",
+    "category": "stream",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "chat_off",
+    "twin_file": "chat_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 38.6,
+    "rel_path": "icons/chat_on.gif",
+    "keywords": "sohbet chat mesaj message discord twitch yorum chatbox chat chat_on yayın sohbeti (açık)"
+  },
+  {
+    "id": "clapper",
+    "filename": "clapper.gif",
+    "core": "clapper",
+    "title": "Yayın Klaketi",
+    "title_base": "Yayın Klaketi",
+    "category": "stream",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 291.3,
+    "rel_path": "icons/clapper.gif",
+    "keywords": "klaket clapper sahne film yayin cut video klip clapper clapper yayın klaketi"
+  },
+  {
+    "id": "clock",
+    "filename": "clock.gif",
+    "core": "clock",
+    "title": "Canlı Saat",
+    "title_base": "Canlı Saat",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 143.6,
+    "rel_path": "icons/clock.gif",
+    "keywords": "saat clock zaman time kronometre sure vakit clock clock canlı saat"
+  },
+  {
+    "id": "cloud",
+    "filename": "cloud.gif",
+    "core": "cloud",
+    "title": "Bulut Depolama",
+    "title_base": "Bulut Depolama",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 38.6,
+    "rel_path": "icons/cloud.gif",
+    "keywords": "bulut cloud senkron depolama sync drive yedek cloud cloud bulut depolama"
+  },
+  {
+    "id": "code",
+    "filename": "code.gif",
+    "core": "code",
+    "title": "Kod Editörü",
+    "title_base": "Kod Editörü",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 237.6,
+    "rel_path": "icons/code.gif",
+    "keywords": "kod code yazilim dev programlama script html css js code code kod editörü"
+  },
+  {
+    "id": "coin",
+    "filename": "coin.gif",
+    "core": "coin",
+    "title": "Altın Coin",
+    "title_base": "Altın Coin",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 334.8,
+    "rel_path": "icons/coin.gif",
+    "keywords": "madeni para coin altin para bakiye crypto btc coin coin coin altın coin"
+  },
+  {
+    "id": "copy",
+    "filename": "copy.gif",
+    "core": "copy",
+    "title": "Panoya Kopyala",
+    "title_base": "Panoya Kopyala",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 200.2,
+    "rel_path": "icons/copy.gif",
+    "keywords": "kopyala copy kopyalama panoya aktar duplicate copy copy panoya kopyala"
+  },
+  {
+    "id": "crown",
+    "filename": "crown.gif",
+    "core": "crown",
+    "title": "Kral Tacı",
+    "title_base": "Kral Tacı",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 248.0,
+    "rel_path": "icons/crown.gif",
+    "keywords": "tac crown kral vip sampiyon lider bir numara gold crown crown kral tacı"
+  },
+  {
+    "id": "diamond",
+    "filename": "diamond.gif",
+    "core": "diamond",
+    "title": "Elmas Mücevher",
+    "title_base": "Elmas Mücevher",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 56.8,
+    "rel_path": "icons/diamond.gif",
+    "keywords": "elmas diamond cevher nadir premium pirlanta gem diamond diamond elmas mücevher"
+  },
+  {
+    "id": "discord",
+    "filename": "discord.gif",
+    "core": "discord",
+    "title": "Discord",
+    "title_base": "Discord",
+    "category": "brand",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 36.8,
+    "rel_path": "icons/discord.gif",
+    "keywords": "discord dc chat sunucu sesli sohbet ses kanali topluluk discord discord discord"
+  },
+  {
+    "id": "download",
+    "filename": "download.gif",
+    "core": "download",
+    "title": "Dosya İndir",
+    "title_base": "Dosya İndir",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 195.7,
+    "rel_path": "icons/download.gif",
+    "keywords": "indir download yukleme kaydet al diske kaydet download download dosya i̇ndir"
+  },
+  {
+    "id": "equalizer",
+    "filename": "equalizer.gif",
+    "core": "equalizer",
+    "title": "Ekolayzer Spektrumu",
+    "title_base": "Ekolayzer Spektrumu",
+    "category": "media",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 422.6,
+    "rel_path": "icons/equalizer.gif",
+    "keywords": "ekolayzer equalizer eq ses frekans muzik ritim dalga equalizer equalizer ekolayzer spektrumu"
+  },
+  {
+    "id": "eye_off",
+    "filename": "eye_off.gif",
+    "core": "eye",
+    "title": "Görünürlük (Kapalı)",
+    "title_base": "Görünürlük",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "eye_on",
+    "twin_file": "eye_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 14.2,
+    "rel_path": "icons/eye_off.gif",
+    "keywords": "goz eye gorunum gizlilik privacy izle bak eye eye_off görünürlük (kapalı)"
+  },
+  {
+    "id": "eye_on",
+    "filename": "eye_on.gif",
+    "core": "eye",
+    "title": "Görünürlük (Açık)",
+    "title_base": "Görünürlük",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "eye_off",
+    "twin_file": "eye_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 154.6,
+    "rel_path": "icons/eye_on.gif",
+    "keywords": "goz eye gorunum gizlilik privacy izle bak eye eye_on görünürlük (açık)"
+  },
+  {
+    "id": "fire",
+    "filename": "fire.gif",
+    "core": "fire",
+    "title": "Ateş Kombo",
+    "title_base": "Ateş Kombo",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 401.4,
+    "rel_path": "icons/fire.gif",
+    "keywords": "ates fire alev hot populer trend combo yangin kombo fire fire ateş kombo"
+  },
+  {
+    "id": "folder",
+    "filename": "folder.gif",
+    "core": "folder",
+    "title": "Klasör",
+    "title_base": "Klasör",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 239.5,
+    "rel_path": "icons/folder.gif",
+    "keywords": "klasor folder dosya dizin arsiv belge folder folder klasör"
+  },
+  {
+    "id": "gamepad",
+    "filename": "gamepad.gif",
+    "core": "gamepad",
+    "title": "Oyun Kolu Gamepad",
+    "title_base": "Oyun Kolu Gamepad",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 19.0,
+    "rel_path": "icons/gamepad.gif",
+    "keywords": "oyun kolu gamepad joystick oyun gaming controller steam gamepad gamepad oyun kolu gamepad"
+  },
+  {
+    "id": "gear",
+    "filename": "gear.gif",
+    "core": "gear",
+    "title": "Gear",
+    "title_base": "Gear",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 402.4,
+    "rel_path": "icons/gear.gif",
+    "keywords": " gear gear gear"
+  },
+  {
+    "id": "ghost",
+    "filename": "ghost.gif",
+    "core": "ghost",
+    "title": "Gizli Hayalet",
+    "title_base": "Gizli Hayalet",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 372.0,
+    "rel_path": "icons/ghost.gif",
+    "keywords": "hayalet ghost gizli gorunmez stealth pacman hortlak ghost ghost gizli hayalet"
+  },
+  {
+    "id": "globe",
+    "filename": "globe.gif",
+    "core": "globe",
+    "title": "İnternet Tarayıcısı",
+    "title_base": "İnternet Tarayıcısı",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 313.4,
+    "rel_path": "icons/globe.gif",
+    "keywords": "dunya globe web internet tarayici site browser ag globe globe i̇nternet tarayıcısı"
+  },
+  {
+    "id": "grid",
+    "filename": "grid.gif",
+    "core": "grid",
+    "title": "Uygulama Tablosu",
+    "title_base": "Uygulama Tablosu",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 316.0,
+    "rel_path": "icons/grid.gif",
+    "keywords": "izgara grid menu duzen butonlar uygulamalar dashboard grid grid uygulama tablosu"
+  },
+  {
+    "id": "headphones_off",
+    "filename": "headphones_off.gif",
+    "core": "headphones",
+    "title": "Kulaklık (Kapalı)",
+    "title_base": "Kulaklık",
+    "category": "stream",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "headphones_on",
+    "twin_file": "headphones_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 15.1,
+    "rel_path": "icons/headphones_off.gif",
+    "keywords": "kulaklik headphones headset ses music dinle kulak headphones headphones_off kulaklık (kapalı)"
+  },
+  {
+    "id": "headphones_on",
+    "filename": "headphones_on.gif",
+    "core": "headphones",
+    "title": "Kulaklık (Açık)",
+    "title_base": "Kulaklık",
+    "category": "stream",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "headphones_off",
+    "twin_file": "headphones_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 133.8,
+    "rel_path": "icons/headphones_on.gif",
+    "keywords": "kulaklik headphones headset ses music dinle kulak headphones headphones_on kulaklık (açık)"
+  },
+  {
+    "id": "heart_off",
+    "filename": "heart_off.gif",
+    "core": "heart",
+    "title": "Beğeni / Kalp (Kapalı)",
+    "title_base": "Beğeni / Kalp",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "heart_on",
+    "twin_file": "heart_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 11.6,
+    "rel_path": "icons/heart_off.gif",
+    "keywords": "kalp heart begeni like favori can hp canlilik heart heart_off beğeni / kalp (kapalı)"
+  },
+  {
+    "id": "heart_on",
+    "filename": "heart_on.gif",
+    "core": "heart",
+    "title": "Beğeni / Kalp (Açık)",
+    "title_base": "Beğeni / Kalp",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "heart_off",
+    "twin_file": "heart_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 136.1,
+    "rel_path": "icons/heart_on.gif",
+    "keywords": "kalp heart begeni like favori can hp canlilik heart heart_on beğeni / kalp (açık)"
+  },
+  {
+    "id": "home",
+    "filename": "home.gif",
+    "core": "home",
+    "title": "Ana Sayfa",
+    "title_base": "Ana Sayfa",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 296.0,
+    "rel_path": "icons/home.gif",
+    "keywords": "ev home anasayfa baslangic giris kok dizin home home ana sayfa"
+  },
+  {
+    "id": "hourglass",
+    "filename": "hourglass.gif",
+    "core": "hourglass",
+    "title": "Kum Saati Geri Sayım",
+    "title_base": "Kum Saati Geri Sayım",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 235.7,
+    "rel_path": "icons/hourglass.gif",
+    "keywords": "kum saati hourglass bekle wait sure geri sayim zaman hourglass hourglass kum saati geri sayım"
+  },
+  {
+    "id": "instagram",
+    "filename": "instagram.gif",
+    "core": "instagram",
+    "title": "Instagram",
+    "title_base": "Instagram",
+    "category": "brand",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 51.9,
+    "rel_path": "icons/instagram.gif",
+    "keywords": "instagram ig reels hikaye story sosyal medya post foto instagram instagram instagram"
+  },
+  {
+    "id": "key",
+    "filename": "key.gif",
+    "core": "key",
+    "title": "Erişim Anahtarı",
+    "title_base": "Erişim Anahtarı",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 277.0,
+    "rel_path": "icons/key.gif",
+    "keywords": "anahtar key sifre erisim password kilit yetki key key erişim anahtarı"
+  },
+  {
+    "id": "keyboard",
+    "filename": "keyboard.gif",
+    "core": "keyboard",
+    "title": "Klavye",
+    "title_base": "Klavye",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 231.2,
+    "rel_path": "icons/keyboard.gif",
+    "keywords": "klavye keyboard tus yazi typing gaming mekanik keyboard keyboard klavye"
+  },
+  {
+    "id": "link",
+    "filename": "link.gif",
+    "core": "link",
+    "title": "Web Bağlantısı",
+    "title_base": "Web Bağlantısı",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 282.7,
+    "rel_path": "icons/link.gif",
+    "keywords": "baglanti link url kopyala web hiperlink link link web bağlantısı"
+  },
+  {
+    "id": "live_off",
+    "filename": "live_off.gif",
+    "core": "live",
+    "title": "Canlı Yayın Rozeti (Kapalı)",
+    "title_base": "Canlı Yayın Rozeti",
+    "category": "stream",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "live_on",
+    "twin_file": "live_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 11.4,
+    "rel_path": "icons/live_off.gif",
+    "keywords": "canli live yayin stream on air yayinda yayinci kirmizi live live_off canlı yayın rozeti (kapalı)"
+  },
+  {
+    "id": "live_on",
+    "filename": "live_on.gif",
+    "core": "live",
+    "title": "Canlı Yayın Rozeti (Açık)",
+    "title_base": "Canlı Yayın Rozeti",
+    "category": "stream",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "live_off",
+    "twin_file": "live_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 22.8,
+    "rel_path": "icons/live_on.gif",
+    "keywords": "canli live yayin stream on air yayinda yayinci kirmizi live live_on canlı yayın rozeti (açık)"
+  },
+  {
+    "id": "lock_off",
+    "filename": "lock_off.gif",
+    "core": "lock",
+    "title": "Kilit Güvenlik (Kapalı)",
+    "title_base": "Kilit Güvenlik",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "lock_on",
+    "twin_file": "lock_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 9.6,
+    "rel_path": "icons/lock_off.gif",
+    "keywords": "kilit lock guvenlik security kilitli sifre gizli lock lock_off kilit güvenlik (kapalı)"
+  },
+  {
+    "id": "lock_on",
+    "filename": "lock_on.gif",
+    "core": "lock",
+    "title": "Kilit Güvenlik (Açık)",
+    "title_base": "Kilit Güvenlik",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "lock_off",
+    "twin_file": "lock_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 308.4,
+    "rel_path": "icons/lock_on.gif",
+    "keywords": "kilit lock guvenlik security kilitli sifre gizli lock lock_on kilit güvenlik (açık)"
+  },
+  {
+    "id": "mail",
+    "filename": "mail.gif",
+    "core": "mail",
+    "title": "Gelen Kutusu",
+    "title_base": "Gelen Kutusu",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 338.5,
+    "rel_path": "icons/mail.gif",
+    "keywords": "e-posta mail posta inbox gelen kutusu mesaj mektup mail mail gelen kutusu"
+  },
+  {
+    "id": "mic_off",
+    "filename": "mic_off.gif",
+    "core": "mic",
+    "title": "Mikrofon (Kapalı)",
+    "title_base": "Mikrofon",
+    "category": "stream",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "mic_on",
+    "twin_file": "mic_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 14.5,
+    "rel_path": "icons/mic_off.gif",
+    "keywords": "mikrofon mic ses voice konusma mute sustur sesli mic mic_off mikrofon (kapalı)"
+  },
+  {
+    "id": "mic_on",
+    "filename": "mic_on.gif",
+    "core": "mic",
+    "title": "Mikrofon (Açık)",
+    "title_base": "Mikrofon",
+    "category": "stream",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "mic_off",
+    "twin_file": "mic_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 11.1,
+    "rel_path": "icons/mic_on.gif",
+    "keywords": "mikrofon mic ses voice konusma mute sustur sesli mic mic_on mikrofon (açık)"
+  },
+  {
+    "id": "monitor_off",
+    "filename": "monitor_off.gif",
+    "core": "monitor",
+    "title": "Monitör Ekranı (Kapalı)",
+    "title_base": "Monitör Ekranı",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "monitor_on",
+    "twin_file": "monitor_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 14.4,
+    "rel_path": "icons/monitor_off.gif",
+    "keywords": "monitor ekran screen display masaustu goruntu pencere monitor monitor_off monitör ekranı (kapalı)"
+  },
+  {
+    "id": "monitor_on",
+    "filename": "monitor_on.gif",
+    "core": "monitor",
+    "title": "Monitör Ekranı (Açık)",
+    "title_base": "Monitör Ekranı",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "monitor_off",
+    "twin_file": "monitor_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 102.8,
+    "rel_path": "icons/monitor_on.gif",
+    "keywords": "monitor ekran screen display masaustu goruntu pencere monitor monitor_on monitör ekranı (açık)"
+  },
+  {
+    "id": "moon_off",
+    "filename": "moon_off.gif",
+    "core": "moon",
+    "title": "Gece Modu (Kapalı)",
+    "title_base": "Gece Modu",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "moon_on",
+    "twin_file": "moon_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 9.1,
+    "rel_path": "icons/moon_off.gif",
+    "keywords": "ay moon gece night karanlik dark uyku rahatsiz etme moon moon_off gece modu (kapalı)"
+  },
+  {
+    "id": "moon_on",
+    "filename": "moon_on.gif",
+    "core": "moon",
+    "title": "Gece Modu (Açık)",
+    "title_base": "Gece Modu",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "moon_off",
+    "twin_file": "moon_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 171.2,
+    "rel_path": "icons/moon_on.gif",
+    "keywords": "ay moon gece night karanlik dark uyku rahatsiz etme moon moon_on gece modu (açık)"
+  },
+  {
+    "id": "music",
+    "filename": "music.gif",
+    "core": "music",
+    "title": "Müzik Notası",
+    "title_base": "Müzik Notası",
+    "category": "media",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 166.9,
+    "rel_path": "icons/music.gif",
+    "keywords": "muzik music nota sarki ses track melodi music music müzik notası"
+  },
+  {
+    "id": "next",
+    "filename": "next.gif",
+    "core": "next",
+    "title": "Sonraki Şarkı",
+    "title_base": "Sonraki Şarkı",
+    "category": "media",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 330.3,
+    "rel_path": "icons/next.gif",
+    "keywords": "sonraki next ileri forward sarki parca atla next next sonraki şarkı"
+  },
+  {
+    "id": "pause",
+    "filename": "pause.gif",
+    "core": "pause",
+    "title": "Duraklat",
+    "title_base": "Duraklat",
+    "category": "media",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 180.0,
+    "rel_path": "icons/pause.gif",
+    "keywords": "duraklat pause beklet durdur mola pause pause duraklat"
+  },
+  {
+    "id": "pin",
+    "filename": "pin.gif",
+    "core": "pin",
+    "title": "Raptiye İğnesi",
+    "title_base": "Raptiye İğnesi",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 210.9,
+    "rel_path": "icons/pin.gif",
+    "keywords": "sabitle pin raptiye onemli tuttur pinle pano pin pin raptiye i̇ğnesi"
+  },
+  {
+    "id": "play",
+    "filename": "play.gif",
+    "core": "play",
+    "title": "Oynat / Başlat",
+    "title_base": "Oynat / Başlat",
+    "category": "media",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 287.1,
+    "rel_path": "icons/play.gif",
+    "keywords": "oynat play baslat cal resume video sarki play play oynat / başlat"
+  },
+  {
+    "id": "power_off",
+    "filename": "power_off.gif",
+    "core": "power",
+    "title": "Güç Aç / Kapat (Kapalı)",
+    "title_base": "Güç Aç / Kapat",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "power_on",
+    "twin_file": "power_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 9.7,
+    "rel_path": "icons/power_off.gif",
+    "keywords": "guc power ac kapat acma kapatma switch tus baslat power power_off güç aç / kapat (kapalı)"
+  },
+  {
+    "id": "power_on",
+    "filename": "power_on.gif",
+    "core": "power",
+    "title": "Güç Aç / Kapat (Açık)",
+    "title_base": "Güç Aç / Kapat",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "power_off",
+    "twin_file": "power_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 237.5,
+    "rel_path": "icons/power_on.gif",
+    "keywords": "guc power ac kapat acma kapatma switch tus baslat power power_on güç aç / kapat (açık)"
+  },
+  {
+    "id": "prev",
+    "filename": "prev.gif",
+    "core": "prev",
+    "title": "Önceki Şarkı",
+    "title_base": "Önceki Şarkı",
+    "category": "media",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 320.4,
+    "rel_path": "icons/prev.gif",
+    "keywords": "onceki prev previous geri sarki basa sar prev prev önceki şarkı"
+  },
+  {
+    "id": "rain",
+    "filename": "rain.gif",
+    "core": "rain",
+    "title": "Yağmur Bulutu",
+    "title_base": "Yağmur Bulutu",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 179.0,
+    "rel_path": "icons/rain.gif",
+    "keywords": "yagmur rain hava weather bulut damla su firtina rain rain yağmur bulutu"
+  },
+  {
+    "id": "record_off",
+    "filename": "record_off.gif",
+    "core": "record",
+    "title": "Kayıt (REC) (Kapalı)",
+    "title_base": "Kayıt (REC)",
+    "category": "stream",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "record_on",
+    "twin_file": "record_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 10.4,
+    "rel_path": "icons/record_off.gif",
+    "keywords": "kayit record rec video kayit obs baslat rec button record record_off kayıt (rec) (kapalı)"
+  },
+  {
+    "id": "record_on",
+    "filename": "record_on.gif",
+    "core": "record",
+    "title": "Kayıt (REC) (Açık)",
+    "title_base": "Kayıt (REC)",
+    "category": "stream",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "record_off",
+    "twin_file": "record_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 350.6,
+    "rel_path": "icons/record_on.gif",
+    "keywords": "kayit record rec video kayit obs baslat rec button record record_on kayıt (rec) (açık)"
+  },
+  {
+    "id": "refresh",
+    "filename": "refresh.gif",
+    "core": "refresh",
+    "title": "Sayfayı Yenile",
+    "title_base": "Sayfayı Yenile",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 354.4,
+    "rel_path": "icons/refresh.gif",
+    "keywords": "yenile refresh reload guncelle tekrar yukle f5 refresh refresh sayfayı yenile"
+  },
+  {
+    "id": "repeat_off",
+    "filename": "repeat_off.gif",
+    "core": "repeat",
+    "title": "Şarkı Tekrarı (Kapalı)",
+    "title_base": "Şarkı Tekrarı",
+    "category": "media",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "repeat_on",
+    "twin_file": "repeat_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 12.4,
+    "rel_path": "icons/repeat_off.gif",
+    "keywords": "tekrar repeat loop dongu sarki tekrar replay repeat repeat_off şarkı tekrarı (kapalı)"
+  },
+  {
+    "id": "repeat_on",
+    "filename": "repeat_on.gif",
+    "core": "repeat",
+    "title": "Şarkı Tekrarı (Açık)",
+    "title_base": "Şarkı Tekrarı",
+    "category": "media",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "repeat_off",
+    "twin_file": "repeat_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 413.6,
+    "rel_path": "icons/repeat_on.gif",
+    "keywords": "tekrar repeat loop dongu sarki tekrar replay repeat repeat_on şarkı tekrarı (açık)"
+  },
+  {
+    "id": "rocket",
+    "filename": "rocket.gif",
+    "core": "rocket",
+    "title": "Hızlı Roket",
+    "title_base": "Hızlı Roket",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 420.2,
+    "rel_path": "icons/rocket.gif",
+    "keywords": "roket rocket firlat hizli boost launch uzay baslat rocket rocket hızlı roket"
+  },
+  {
+    "id": "screenshot",
+    "filename": "screenshot.gif",
+    "core": "screenshot",
+    "title": "Ekran Görüntüsü",
+    "title_base": "Ekran Görüntüsü",
+    "category": "stream",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 463.3,
+    "rel_path": "icons/screenshot.gif",
+    "keywords": "ekran goruntusu screenshot ss yakala capture foto screenshot screenshot ekran görüntüsü"
+  },
+  {
+    "id": "search",
+    "filename": "search.gif",
+    "core": "search",
+    "title": "Hızlı Arama",
+    "title_base": "Hızlı Arama",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 452.6,
+    "rel_path": "icons/search.gif",
+    "keywords": "ara search arama bul mercek find query buyutec search search hızlı arama"
+  },
+  {
+    "id": "shield",
+    "filename": "shield.gif",
+    "core": "shield",
+    "title": "Güvenlik Kalkanı",
+    "title_base": "Güvenlik Kalkanı",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 60.8,
+    "rel_path": "icons/shield.gif",
+    "keywords": "kalkan shield guvenlik koruma anti-virus guard savunma shield shield güvenlik kalkanı"
+  },
+  {
+    "id": "shuffle_off",
+    "filename": "shuffle_off.gif",
+    "core": "shuffle",
+    "title": "Karışık Çal (Kapalı)",
+    "title_base": "Karışık Çal",
+    "category": "media",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "shuffle_on",
+    "twin_file": "shuffle_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 10.7,
+    "rel_path": "icons/shuffle_off.gif",
+    "keywords": "karistir shuffle rastgele random mix sarki karisik shuffle shuffle_off karışık çal (kapalı)"
+  },
+  {
+    "id": "shuffle_on",
+    "filename": "shuffle_on.gif",
+    "core": "shuffle",
+    "title": "Karışık Çal (Açık)",
+    "title_base": "Karışık Çal",
+    "category": "media",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "shuffle_off",
+    "twin_file": "shuffle_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 303.5,
+    "rel_path": "icons/shuffle_on.gif",
+    "keywords": "karistir shuffle rastgele random mix sarki karisik shuffle shuffle_on karışık çal (açık)"
+  },
+  {
+    "id": "smile",
+    "filename": "smile.gif",
+    "core": "smile",
+    "title": "Gülen Yüz",
+    "title_base": "Gülen Yüz",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 24.7,
+    "rel_path": "icons/smile.gif",
+    "keywords": "gulumse smile emoji ifade mutlu happy neseli gulucuk smile smile gülen yüz"
+  },
+  {
+    "id": "snowflake",
+    "filename": "snowflake.gif",
+    "core": "snowflake",
+    "title": "Kar Tanesi",
+    "title_base": "Kar Tanesi",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 502.4,
+    "rel_path": "icons/snowflake.gif",
+    "keywords": "kar tanesi snowflake soguk kis donma buz cool freeze snowflake snowflake kar tanesi"
+  },
+  {
+    "id": "spotify",
+    "filename": "spotify.gif",
+    "core": "spotify",
+    "title": "Spotify",
+    "title_base": "Spotify",
+    "category": "brand",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 66.8,
+    "rel_path": "icons/spotify.gif",
+    "keywords": "spotify muzik sarki podcast playlist calma listesi sarki spotify spotify spotify"
+  },
+  {
+    "id": "star_off",
+    "filename": "star_off.gif",
+    "core": "star",
+    "title": "Yıldız Favori (Kapalı)",
+    "title_base": "Yıldız Favori",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "star_on",
+    "twin_file": "star_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 14.4,
+    "rel_path": "icons/star_off.gif",
+    "keywords": "yildiz star favori favorite puan rating favorilere ekle star star_off yıldız favori (kapalı)"
+  },
+  {
+    "id": "star_on",
+    "filename": "star_on.gif",
+    "core": "star",
+    "title": "Yıldız Favori (Açık)",
+    "title_base": "Yıldız Favori",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "star_off",
+    "twin_file": "star_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 492.9,
+    "rel_path": "icons/star_on.gif",
+    "keywords": "yildiz star favori favorite puan rating favorilere ekle star star_on yıldız favori (açık)"
+  },
+  {
+    "id": "sun_off",
+    "filename": "sun_off.gif",
+    "core": "sun",
+    "title": "Gündüz / Parlaklık (Kapalı)",
+    "title_base": "Gündüz / Parlaklık",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "sun_on",
+    "twin_file": "sun_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 10.9,
+    "rel_path": "icons/sun_off.gif",
+    "keywords": "gunes sun parlaklik brightness gunduz light aydinlik sun sun_off gündüz / parlaklık (kapalı)"
+  },
+  {
+    "id": "sun_on",
+    "filename": "sun_on.gif",
+    "core": "sun",
+    "title": "Gündüz / Parlaklık (Açık)",
+    "title_base": "Gündüz / Parlaklık",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "sun_off",
+    "twin_file": "sun_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 438.3,
+    "rel_path": "icons/sun_on.gif",
+    "keywords": "gunes sun parlaklik brightness gunduz light aydinlik sun sun_on gündüz / parlaklık (açık)"
+  },
+  {
+    "id": "target",
+    "filename": "target.gif",
+    "core": "target",
+    "title": "Hedef Nişangahı",
+    "title_base": "Hedef Nişangahı",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 346.7,
+    "rel_path": "icons/target.gif",
+    "keywords": "hedef target nisan aim fps crosshair atis nisan al target target hedef nişangahı"
+  },
+  {
+    "id": "terminal",
+    "filename": "terminal.gif",
+    "core": "terminal",
+    "title": "Terminal Konsolu",
+    "title_base": "Terminal Konsolu",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 15.1,
+    "rel_path": "icons/terminal.gif",
+    "keywords": "terminal konsol console bash komut cmd shell powershell terminal terminal terminal konsolu"
+  },
+  {
+    "id": "trash",
+    "filename": "trash.gif",
+    "core": "trash",
+    "title": "Çöp Kutusu",
+    "title_base": "Çöp Kutusu",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 105.1,
+    "rel_path": "icons/trash.gif",
+    "keywords": "cop trash sil delete kaldir kutusu kutu copluk trash trash çöp kutusu"
+  },
+  {
+    "id": "trophy",
+    "filename": "trophy.gif",
+    "core": "trophy",
+    "title": "Şampiyonluk Kupası",
+    "title_base": "Şampiyonluk Kupası",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 160.0,
+    "rel_path": "icons/trophy.gif",
+    "keywords": "kupa trophy odul basari kazanan winner win sampiyonluk trophy trophy şampiyonluk kupası"
+  },
+  {
+    "id": "twitch",
+    "filename": "twitch.gif",
+    "core": "twitch",
+    "title": "Twitch",
+    "title_base": "Twitch",
+    "category": "brand",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 14.1,
+    "rel_path": "icons/twitch.gif",
+    "keywords": "twitch canli yayin yayinci stream kanal chat sub abone twitch twitch twitch"
+  },
+  {
+    "id": "upload",
+    "filename": "upload.gif",
+    "core": "upload",
+    "title": "Dosya Yükle",
+    "title_base": "Dosya Yükle",
+    "category": "system",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 237.8,
+    "rel_path": "icons/upload.gif",
+    "keywords": "yukle upload gonder buluta yukle gonderim upload upload dosya yükle"
+  },
+  {
+    "id": "volume_down",
+    "filename": "volume_down.gif",
+    "core": "volume_down",
+    "title": "Ses Kıs",
+    "title_base": "Ses Kıs",
+    "category": "media",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 87.5,
+    "rel_path": "icons/volume_down.gif",
+    "keywords": "ses azalt volume down ses kis alcak vol- volume_down volume_down ses kıs"
+  },
+  {
+    "id": "volume_off",
+    "filename": "volume_off.gif",
+    "core": "volume",
+    "title": "Ses Açık / Kapalı (Kapalı)",
+    "title_base": "Ses Açık / Kapalı",
+    "category": "media",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "volume_on",
+    "twin_file": "volume_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 12.4,
+    "rel_path": "icons/volume_off.gif",
+    "keywords": "ses volume audio hoparlor speaker duzey ses seviyesi volume volume_off ses açık / kapalı (kapalı)"
+  },
+  {
+    "id": "volume_on",
+    "filename": "volume_on.gif",
+    "core": "volume",
+    "title": "Ses Açık / Kapalı (Açık)",
+    "title_base": "Ses Açık / Kapalı",
+    "category": "media",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "volume_off",
+    "twin_file": "volume_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 145.6,
+    "rel_path": "icons/volume_on.gif",
+    "keywords": "ses volume audio hoparlor speaker duzey ses seviyesi volume volume_on ses açık / kapalı (açık)"
+  },
+  {
+    "id": "volume_up",
+    "filename": "volume_up.gif",
+    "core": "volume_up",
+    "title": "Ses Aç",
+    "title_base": "Ses Aç",
+    "category": "media",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 94.9,
+    "rel_path": "icons/volume_up.gif",
+    "keywords": "ses arttir volume up ses ac yuksek vol+ volume_up volume_up ses aç"
+  },
+  {
+    "id": "wand",
+    "filename": "wand.gif",
+    "core": "wand",
+    "title": "Sihirli Değnek",
+    "title_base": "Sihirli Değnek",
+    "category": "game",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 271.5,
+    "rel_path": "icons/wand.gif",
+    "keywords": "sihirli degnek wand efekt buyu sihir sihirbaz wizard parlama wand wand sihirli değnek"
+  },
+  {
+    "id": "wifi_off",
+    "filename": "wifi_off.gif",
+    "core": "wifi",
+    "title": "Wi-Fi Kablosuz (Kapalı)",
+    "title_base": "Wi-Fi Kablosuz",
+    "category": "toggle",
+    "is_on": false,
+    "is_off": true,
+    "is_toggle": true,
+    "twin_base": "wifi_on",
+    "twin_file": "wifi_on.gif",
+    "state_tag": "KAPALI",
+    "state_class": "state-off",
+    "size_kb": 13.5,
+    "rel_path": "icons/wifi_off.gif",
+    "keywords": "wifi kablosuz internet ag network baglanti modem wifi wifi_off wi-fi kablosuz (kapalı)"
+  },
+  {
+    "id": "wifi_on",
+    "filename": "wifi_on.gif",
+    "core": "wifi",
+    "title": "Wi-Fi Kablosuz (Açık)",
+    "title_base": "Wi-Fi Kablosuz",
+    "category": "toggle",
+    "is_on": true,
+    "is_off": false,
+    "is_toggle": true,
+    "twin_base": "wifi_off",
+    "twin_file": "wifi_off.gif",
+    "state_tag": "AÇIK",
+    "state_class": "state-on",
+    "size_kb": 115.1,
+    "rel_path": "icons/wifi_on.gif",
+    "keywords": "wifi kablosuz internet ag network baglanti modem wifi wifi_on wi-fi kablosuz (açık)"
+  },
+  {
+    "id": "x",
+    "filename": "x.gif",
+    "core": "x",
+    "title": "X (Twitter)",
+    "title_base": "X (Twitter)",
+    "category": "brand",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 362.6,
+    "rel_path": "icons/x.gif",
+    "keywords": "x twitter tweet sosyal medya paylas gonderi post x x x (twitter)"
+  },
+  {
+    "id": "youtube",
+    "filename": "youtube.gif",
+    "core": "youtube",
+    "title": "YouTube",
+    "title_base": "YouTube",
+    "category": "brand",
+    "is_on": false,
+    "is_off": false,
+    "is_toggle": false,
+    "twin_base": "",
+    "twin_file": "",
+    "state_tag": "DÖNGÜ",
+    "state_class": "state-loop",
+    "size_kb": 289.1,
+    "rel_path": "icons/youtube.gif",
+    "keywords": "youtube yt video abone izle kanal shorts yayin video youtube youtube youtube"
+  }
+];
+
+  // Audio Synth for mechanical switch sound
+  let audioCtx = null;
+  function playClickSound(freq = 600, duration = 0.04) {
+    try {
+      if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(120, audioCtx.currentTime + duration);
+      gain.gain.setValueAtTime(0.12, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + duration);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + duration);
+    } catch(e) {}
+  }
+
+  // Deck State (12 Slots)
+  let deckSlots = new Array(12).fill(null);
+  let selectedDeckSlot = 0;
+  let activeCategory = 'all';
+  let searchQuery = '';
+
+  // Initial preset
+  const PRESETS = {
+    streamer: ['mic_on', 'headphones_on', 'live_on', 'camera_on', 'discord', 'twitch', 'clapper', 'volume_up', 'volume_down', 'screenshot', 'chat_on', 'bell_on'],
+    gaming: ['gamepad', 'trophy', 'target', 'discord', 'fire', 'bolt', 'crown', 'diamond', 'spotify', 'volume_up', 'volume_down', 'power_on'],
+    media: ['play', 'pause', 'next', 'prev', 'equalizer', 'music', 'volume_up', 'volume_down', 'shuffle_on', 'repeat_on', 'headphones_on', 'spotify'],
+    system: ['battery', 'clock', 'calendar', 'wifi_on', 'bluetooth_on', 'lock_on', 'terminal', 'search', 'folder', 'copy', 'download', 'trash']
+  };
+
+  function initDeck() {
+    const list = PRESETS.streamer;
+    list.forEach((id, i) => {
+      const ic = ICONS.find(x => x.id === id);
+      if (ic) deckSlots[i] = { ...ic };
+    });
+    renderDeck();
+  }
+
+  function renderDeck() {
+    const grid = document.getElementById('deckGrid');
+    grid.innerHTML = '';
+
+    deckSlots.forEach((slot, index) => {
+      const keyEl = document.createElement('div');
+      keyEl.className = 'deck-key' + (index === selectedDeckSlot ? ' selected' : '');
+      
+      if (slot) {
+        const isToggle = slot.is_toggle;
+        const toggleBadge = slot.is_on ? '<span class="deck-key-toggle-badge badge-on"></span>' :
+                            (slot.is_off ? '<span class="deck-key-toggle-badge badge-off"></span>' : '');
+
+        keyEl.innerHTML = `
+          <img src="${slot.rel_path}" alt="${slot.title}">
+          <span class="deck-key-label">${slot.title_base || slot.title}</span>
+          ${toggleBadge}
+        `;
+        keyEl.onclick = (e) => onDeckKeyClick(index, e);
+      } else {
+        keyEl.innerHTML = `
+          <span style="font-size:22px; color:#28334d;">+</span>
+          <span class="deck-key-label" style="color:#475569;">#${index + 1} BOŞ</span>
+        `;
+        keyEl.onclick = () => selectDeckSlot(index);
+      }
+
+      grid.appendChild(keyEl);
+    });
+  }
+
+  function selectDeckSlot(index) {
+    selectedDeckSlot = index;
+    playClickSound(450, 0.03);
+    renderDeck();
+    showToast('🎮', `Simülatör Yuvası #${index + 1} seçildi. Galeriden bir ikona tıklayın.`);
+  }
+
+  function onDeckKeyClick(index, e) {
+    const slot = deckSlots[index];
+    if (!slot) return;
+
+    // Trigger visual press effect
+    const keys = document.querySelectorAll('.deck-key');
+    if (keys[index]) {
+      keys[index].classList.add('pressing');
+      setTimeout(() => keys[index].classList.remove('pressing'), 150);
+    }
+
+    // Check if slot has twin toggle state
+    if (slot.is_toggle && slot.twin_base) {
+      const twin = ICONS.find(x => x.id === slot.twin_base);
+      if (twin) {
+        deckSlots[index] = { ...twin };
+        playClickSound(slot.is_on ? 320 : 750, 0.05); // low freq when turning off, high when turning on
+        renderDeck();
+        showToast(twin.is_on ? '🟢' : '🔴', `${twin.title_base}: ${twin.state_tag} durumuna geçti!`);
+        return;
+      }
+    }
+
+    // If single state or clicked again, play tap sound & select slot
+    playClickSound(520, 0.03);
+    selectedDeckSlot = index;
+    renderDeck();
+    showToast('⚡', `"${slot.title}" tetiklendi.`);
+  }
+
+  function assignToDeck(icon) {
+    deckSlots[selectedDeckSlot] = { ...icon };
+    playClickSound(800, 0.04);
+    renderDeck();
+    showToast('🚀', `"${icon.title}" #${selectedDeckSlot + 1} numaralı tuşa yerleştirildi!`);
+    
+    // Auto advance to next slot
+    selectedDeckSlot = (selectedDeckSlot + 1) % deckSlots.length;
+    renderDeck();
+  }
+
+  function resetDeckPreset(type) {
+    const list = PRESETS[type] || [];
+    deckSlots = new Array(12).fill(null);
+    list.forEach((id, i) => {
+      const ic = ICONS.find(x => x.id === id);
+      if (ic && i < 12) deckSlots[i] = { ...ic };
+    });
+    playClickSound(650, 0.05);
+    renderDeck();
+    showToast('⚡', `${type.toUpperCase()} hazır seti simülatöre yüklendi!`);
+  }
+
+  function clearDeck() {
+    deckSlots = new Array(12).fill(null);
+    playClickSound(300, 0.05);
+    renderDeck();
+    showToast('🗑️', 'Tüm simülatör tuşları temizlendi.');
+  }
+
+  // Gallery Rendering
+  function renderGallery() {
+    const grid = document.getElementById('galleryGrid');
+    grid.innerHTML = '';
+
+    const q = searchQuery.toLowerCase().trim();
+    const filtered = ICONS.filter(item => {
+      const matchCat = (activeCategory === 'all') || 
+                       (activeCategory === 'toggle' && item.is_toggle) ||
+                       (item.category === activeCategory);
+
+      const matchSearch = !q || item.keywords.toLowerCase().includes(q);
+      return matchCat && matchSearch;
+    });
+
+    document.getElementById('visibleCount').textContent = filtered.length;
+
+    filtered.forEach(icon => {
+      const card = document.createElement('div');
+      card.className = 'icon-card';
+      
+      let toggleBtnHtml = '';
+      if (icon.is_toggle && icon.twin_base) {
+        toggleBtnHtml = `
+          <button class="btn-card-act btn-card-toggle" onclick="swapCardState('${icon.id}', event)" title="Açık/Kapalı Durumunu Çevir">
+            ⇄ Çevir
+          </button>
+        `;
+      }
+
+      card.innerHTML = `
+        <div class="img-wrapper" onclick="assignToDeck(ICONS.find(x => x.id === '${icon.id}'))">
+          <img src="${icon.rel_path}" alt="${icon.title}" loading="lazy" id="img_${icon.id}">
+        </div>
+        <div class="icon-title">${icon.title}</div>
+        <span class="state-pill ${icon.state_class}">${icon.state_tag}</span>
+        <div class="card-actions">
+          ${toggleBtnHtml}
+          <button class="btn-card-act" onclick="openModal('${icon.id}', event)" title="Büyüt & İncele">🔍</button>
+          <button class="btn-card-act" onclick="copyFilename('${icon.filename}', event)" title="Dosya Adını Kopyala">📋</button>
+          <button class="btn-card-act" onclick="downloadIcon('${icon.rel_path}', '${icon.filename}', event)" title="GIF İndir">💾</button>
+        </div>
+      `;
+
+      card.onclick = (e) => {
+        if (!e.target.closest('button')) {
+          assignToDeck(icon);
+        }
+      };
+
+      grid.appendChild(card);
+    });
+  }
+
+  function swapCardState(iconId, e) {
+    if (e) e.stopPropagation();
+    const cur = ICONS.find(x => x.id === iconId);
+    if (!cur || !cur.twin_base) return;
+    const twin = ICONS.find(x => x.id === cur.twin_base);
+    if (!twin) return;
+
+    playClickSound(twin.is_on ? 700 : 350, 0.04);
+    
+    // Quick in-place update if visible
+    const imgEl = document.getElementById('img_' + iconId);
+    if (imgEl) {
+      imgEl.src = twin.rel_path;
+      imgEl.id = 'img_' + twin.id;
+    }
+    showToast(twin.is_on ? '🟢' : '🔴', `${twin.title}: Canlı geçiş yapıldı!`);
+  }
+
+  function filterGallery() {
+    searchQuery = document.getElementById('searchInput').value;
+    renderGallery();
+  }
+
+  function setCategory(cat, btn) {
+    activeCategory = cat;
+    document.querySelectorAll('#categoryTabs .tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderGallery();
+  }
+
+  function quickSearch(word) {
+    document.getElementById('searchInput').value = word;
+    searchQuery = word;
+    renderGallery();
+  }
+
+  function copyFilename(fn, e) {
+    if (e) e.stopPropagation();
+    navigator.clipboard.writeText(fn).then(() => {
+      showToast('📋', `"${fn}" panoya kopyalandı!`);
+    }).catch(() => {
+      showToast('📄', fn);
+    });
+  }
+
+  function copyEvoxPath() {
+    const p = `%APPDATA%\\evoX\\icons\\Neon Pulse Icons`;
+    navigator.clipboard.writeText(p).then(() => {
+      showToast('📁', `evoX klasör yolu panoya kopyalandı!`);
+    });
+  }
+
+  function downloadIcon(path, fn, e) {
+    if (e) e.stopPropagation();
+    const a = document.createElement('a');
+    a.href = path;
+    a.download = fn;
+    a.click();
+    showToast('💾', `"${fn}" indiriliyor...`);
+  }
+
+  // Modal Inspector
+  let currentModalIcon = null;
+  function openModal(iconId, e) {
+    if (e) e.stopPropagation();
+    const ic = ICONS.find(x => x.id === iconId);
+    if (!ic) return;
+    currentModalIcon = ic;
+
+    document.getElementById('modalTitle').textContent = ic.title;
+    const catBadge = document.getElementById('modalCategory');
+    catBadge.textContent = ic.state_tag;
+    catBadge.className = 'state-pill ' + ic.state_class;
+    
+    document.getElementById('modalImg').src = ic.rel_path;
+    document.getElementById('modalInfo').textContent = `${ic.filename} &bull; 256x256 px &bull; ${ic.size_kb} KB &bull; 36 Kare @ 40ms`;
+
+    document.getElementById('modalDownloadBtn').onclick = () => downloadIcon(ic.rel_path, ic.filename);
+    document.getElementById('modalAssignBtn').onclick = () => {
+      assignToDeck(ic);
+      closeModal();
+    };
+
+    document.getElementById('modalOverlay').style.display = 'flex';
+  }
+
+  function closeModal(e) {
+    if (e && e.target !== e.currentTarget && !e.target.classList.contains('modal-close')) return;
+    document.getElementById('modalOverlay').style.display = 'none';
+  }
+
+  function changeModalBg(color, dot) {
+    document.getElementById('modalStage').style.background = color;
+    document.querySelectorAll('.bg-dot').forEach(d => d.classList.remove('active'));
+    if (dot) dot.classList.add('active');
+  }
+
+  // Toast Box
+  let toastTimer = null;
+  function showToast(icon, msg) {
+    const toast = document.getElementById('toastBox');
+    document.getElementById('toastIcon').textContent = icon;
+    document.getElementById('toastMsg').textContent = msg;
+    toast.style.display = 'flex';
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.style.display = 'none';
+    }, 2800);
+  }
+
+  // Keyboard shortcut (Escape closes modal)
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // Init on load
+  window.addEventListener('DOMContentLoaded', () => {
+    initDeck();
+    renderGallery();
+  });
+</script>
+
+</body>
+</html>
