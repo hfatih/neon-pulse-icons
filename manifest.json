@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 1,
+  "packageType": "icon_pack",
+  "name": "Neon Pulse Icons",
+  "description": "Cyberpunk and neon themed animated GIF icons suite for Stream Deck and evoX.",
+  "version": "1.0.0",
+  "author": {
+    "id": "hfatih",
+    "name": "Fatih Han"
+  },
+  "requiredActions": [],
+  "requiredIntegrations": [],
+  "coverImage": "cover.png",
+  "createdWith": "evox-deck-v2",
+  "createdAt": "2026-10-24T04:07:19.000Z",
+  "assets": {
+    "icons": [
+      {
+        "id": "neon-pulse-airplane-off",
+        "name": "Airplane (Kapalı)",
+        "path": "assets/icons/airplane_off.gif"
+      },
+      {
+        "id": "neon-pulse-airplane-on",
+        "name": "Airplane (Açık)",
+        "path": "assets/icons/airplane_on.gif"
+      },
+      {
+        "id": "neon-pulse-battery",
+        "name": "Battery",
+        "path": "assets/icons/battery.gif"
+      },
+      {
+        "id": "neon-pulse-bell-off",
+        "name": "Bell (Kapalı)",
+        "path": "assets/icons/bell_off.gif"
+      },
+      {
+        "id": "neon-pulse-bell-on",
+        "name": "Bell (Açık)",
+        "path": "assets/icons/bell_on.gif"
+      },
+      {
+        "id": "neon-pulse-bluetooth-off",
+        "name": "Bluetooth (Kapalı)",
+        "path": "assets/icons/bluetooth_off.gif"
+      },
+      {
+        "id": "neon-pulse-bluetooth-on",
+        "name": "Bluetooth (Açık)",
+        "path": "assets/icons/bluetooth_on.gif"
+      },
+      {
+        "id": "neon-pulse-bolt",
+        "name": "Bolt",
+        "path": "assets/icons/bolt.gif"
+      },
+      {
+        "id": "neon-pulse-bookmark",
+        "name": "Bookmark",
+        "path": "assets/icons/bookmark.gif"
+      },
+      {
+        "id": "neon-pulse-bulb-off",
+        "name": "Bulb (Kapalı)",
+        "path": "assets/icons/bulb_off.gif"
+      },
+      {
+        "id": "neon-pulse-bulb-on",
+        "name": "Bulb (Açık)",
+        "path": "assets/icons/bulb_on.gif"
+      },
+      {
+        "id": "neon-pulse-calendar",
+        "name": "Calendar",
+        "path": "assets/icons/calendar.gif"
+      },
+      {
+        "id": "neon-pulse-camera-off",
+        "name": "Camera (Kapalı)",
+        "path": "assets/icons/camera_off.gif"
+      },
+      {
+        "id": "neon-pulse-camera-on",
+        "name": "Camera (Açık)",
+        "path": "assets/icons/camera_on.gif"
+      },
+      {
+        "id": "neon-pulse-chart",
+        "name": "Chart",
+        "path": "assets/icons/chart.gif"
+      },
+      {
+        "id": "neon-pulse-chat-off",
+        "name": "Chat (Kapalı)",
+        "path": "assets/icons/chat_off.gif"
+      },
+      {
+        "id": "neon-pulse-chat-on",
+        "name": "Chat (Açık)",
+        "path": "assets/icons/chat_on.gif"
+      },
+      {
+        "id": "neon-pulse-clapper",
+        "name": "Clapper",
+        "path": "assets/icons/clapper.gif"
+      },
+      {
+        "id": "neon-pulse-clock",
+        "name": "Clock",
+        "path": "assets/icons/clock.gif"
+      },
+      {
+        "id": "neon-pulse-cloud",
+        "name": "Cloud",
+        "path": "assets/icons/cloud.gif"
+      },
+      {
+        "id": "neon-pulse-code",
+        "name": "Code",
+        "path": "assets/icons/code.gif"
+      },
+      {
+        "id": "neon-pulse-coin",
+        "name": "Coin",
+        "path": "assets/icons/coin.gif"
+      },
+      {
+        "id": "neon-pulse-copy",
+        "name": "Copy",
+        "path": "assets/icons/copy.gif"
+      },
+      {
+        "id": "neon-pulse-crown",
+        "name": "Crown",
+        "path": "assets/icons/crown.gif"
+      },
+      {
+        "id": "neon-pulse-diamond",
+        "name": "Diamond",
+        "path": "assets/icons/diamond.gif"
+      },
+      {
+        "id": "neon-pulse-discord",
+        "name": "Discord",
+        "path": "assets/icons/discord.gif"
+      },
+      {
+        "id": "neon-pulse-download",
+        "name": "Download",
+        "path": "assets/icons/download.gif"
+      },
+      {
+        "id": "neon-pulse-equalizer",
+        "name": "Equalizer",
+        "path": "assets/icons/equalizer.gif"
+      },
+      {
+        "id": "neon-pulse-eye-off",
+        "name": "Eye (Kapalı)",
+        "path": "assets/icons/eye_off.gif"
+      },
+      {
+        "id": "neon-pulse-eye-on",
+        "name": "Eye (Açık)",
+        "path": "assets/icons/eye_on.gif"
+      },
+      {
+        "id": "neon-pulse-fire",
+        "name": "Fire",
+        "path": "assets/icons/fire.gif"
+      },
+      {
+        "id": "neon-pulse-folder",
+        "name": "Folder",
+        "path": "assets/icons/folder.gif"
+      },
+      {
+        "id": "neon-pulse-gamepad",
+        "name": "Gamepad",
+        "path": "assets/icons/gamepad.gif"
+      },
+      {
+        "id": "neon-pulse-gear",
+        "name": "Gear",
+        "path": "assets/icons/gear.gif"
+      },
+      {
+        "id": "neon-pulse-ghost",
+        "name": "Ghost",
+        "path": "assets/icons/ghost.gif"
+      },
+      {
+        "id": "neon-pulse-globe",
+        "name": "Globe",
+        "path": "assets/icons/globe.gif"
+      },
+      {
+        "id": "neon-pulse-grid",
+        "name": "Grid",
+        "path": "assets/icons/grid.gif"
+      },
+      {
+        "id": "neon-pulse-headphones-off",
+        "name": "Headphones (Kapalı)",
+        "path": "assets/icons/headphones_off.gif"
+      },
+      {
+        "id": "neon-pulse-headphones-on",
+        "name": "Headphones (Açık)",
+        "path": "assets/icons/headphones_on.gif"
+      },
+      {
+        "id": "neon-pulse-heart-off",
+        "name": "Heart (Kapalı)",
+        "path": "assets/icons/heart_off.gif"
+      },
+      {
+        "id": "neon-pulse-heart-on",
+        "name": "Heart (Açık)",
+        "path": "assets/icons/heart_on.gif"
+      },
+      {
+        "id": "neon-pulse-home",
+        "name": "Home",
+        "path": "assets/icons/home.gif"
+      },
+      {
+        "id": "neon-pulse-hourglass",
+        "name": "Hourglass",
+        "path": "assets/icons/hourglass.gif"
+      },
+      {
+        "id": "neon-pulse-instagram",
+        "name": "Instagram",
+        "path": "assets/icons/instagram.gif"
+      },
+      {
+        "id": "neon-pulse-key",
+        "name": "Key",
+        "path": "assets/icons/key.gif"
+      },
+      {
+        "id": "neon-pulse-keyboard",
+        "name": "Keyboard",
+        "path": "assets/icons/keyboard.gif"
+      },
+      {
+        "id": "neon-pulse-link",
+        "name": "Link",
+        "path": "assets/icons/link.gif"
+      },
+      {
+        "id": "neon-pulse-live-off",
+        "name": "Live (Kapalı)",
+        "path": "assets/icons/live_off.gif"
+      },
+      {
+        "id": "neon-pulse-live-on",
+        "name": "Live (Açık)",
+        "path": "assets/icons/live_on.gif"
+      },
+      {
+        "id": "neon-pulse-lock-off",
+        "name": "Lock (Kapalı)",
+        "path": "assets/icons/lock_off.gif"
+      },
+      {
+        "id": "neon-pulse-lock-on",
+        "name": "Lock (Açık)",
+        "path": "assets/icons/lock_on.gif"
+      },
+      {
+        "id": "neon-pulse-mail",
+        "name": "Mail",
+        "path": "assets/icons/mail.gif"
+      },
+      {
+        "id": "neon-pulse-mic-off",
+        "name": "Mic (Kapalı)",
+        "path": "assets/icons/mic_off.gif"
+      },
+      {
+        "id": "neon-pulse-mic-on",
+        "name": "Mic (Açık)",
+        "path": "assets/icons/mic_on.gif"
+      },
+      {
+        "id": "neon-pulse-monitor-off",
+        "name": "Monitor (Kapalı)",
+        "path": "assets/icons/monitor_off.gif"
+      },
+      {
+        "id": "neon-pulse-monitor-on",
+        "name": "Monitor (Açık)",
+        "path": "assets/icons/monitor_on.gif"
+      },
+      {
+        "id": "neon-pulse-moon-off",
+        "name": "Moon (Kapalı)",
+        "path": "assets/icons/moon_off.gif"
+      },
+      {
+        "id": "neon-pulse-moon-on",
+        "name": "Moon (Açık)",
+        "path": "assets/icons/moon_on.gif"
+      },
+      {
+        "id": "neon-pulse-music",
+        "name": "Music",
+        "path": "assets/icons/music.gif"
+      },
+      {
+        "id": "neon-pulse-next",
+        "name": "Next",
+        "path": "assets/icons/next.gif"
+      },
+      {
+        "id": "neon-pulse-pause",
+        "name": "Pause",
+        "path": "assets/icons/pause.gif"
+      },
+      {
+        "id": "neon-pulse-pin",
+        "name": "Pin",
+        "path": "assets/icons/pin.gif"
+      },
+      {
+        "id": "neon-pulse-play",
+        "name": "Play",
+        "path": "assets/icons/play.gif"
+      },
+      {
+        "id": "neon-pulse-power-off",
+        "name": "Power (Kapalı)",
+        "path": "assets/icons/power_off.gif"
+      },
+      {
+        "id": "neon-pulse-power-on",
+        "name": "Power (Açık)",
+        "path": "assets/icons/power_on.gif"
+      },
+      {
+        "id": "neon-pulse-prev",
+        "name": "Prev",
+        "path": "assets/icons/prev.gif"
+      },
+      {
+        "id": "neon-pulse-rain",
+        "name": "Rain",
+        "path": "assets/icons/rain.gif"
+      },
+      {
+        "id": "neon-pulse-record-off",
+        "name": "Record (Kapalı)",
+        "path": "assets/icons/record_off.gif"
+      },
+      {
+        "id": "neon-pulse-record-on",
+        "name": "Record (Açık)",
+        "path": "assets/icons/record_on.gif"
+      },
+      {
+        "id": "neon-pulse-refresh",
+        "name": "Refresh",
+        "path": "assets/icons/refresh.gif"
+      },
+      {
+        "id": "neon-pulse-repeat-off",
+        "name": "Repeat (Kapalı)",
+        "path": "assets/icons/repeat_off.gif"
+      },
+      {
+        "id": "neon-pulse-repeat-on",
+        "name": "Repeat (Açık)",
+        "path": "assets/icons/repeat_on.gif"
+      },
+      {
+        "id": "neon-pulse-rocket",
+        "name": "Rocket",
+        "path": "assets/icons/rocket.gif"
+      },
+      {
+        "id": "neon-pulse-screenshot",
+        "name": "Screenshot",
+        "path": "assets/icons/screenshot.gif"
+      },
+      {
+        "id": "neon-pulse-search",
+        "name": "Search",
+        "path": "assets/icons/search.gif"
+      },
+      {
+        "id": "neon-pulse-shield",
+        "name": "Shield",
+        "path": "assets/icons/shield.gif"
+      },
+      {
+        "id": "neon-pulse-shuffle-off",
+        "name": "Shuffle (Kapalı)",
+        "path": "assets/icons/shuffle_off.gif"
+      },
+      {
+        "id": "neon-pulse-shuffle-on",
+        "name": "Shuffle (Açık)",
+        "path": "assets/icons/shuffle_on.gif"
+      },
+      {
+        "id": "neon-pulse-smile",
+        "name": "Smile",
+        "path": "assets/icons/smile.gif"
+      },
+      {
+        "id": "neon-pulse-snowflake",
+        "name": "Snowflake",
+        "path": "assets/icons/snowflake.gif"
+      },
+      {
+        "id": "neon-pulse-spotify",
+        "name": "Spotify",
+        "path": "assets/icons/spotify.gif"
+      },
+      {
+        "id": "neon-pulse-star-off",
+        "name": "Star (Kapalı)",
+        "path": "assets/icons/star_off.gif"
+      },
+      {
+        "id": "neon-pulse-star-on",
+        "name": "Star (Açık)",
+        "path": "assets/icons/star_on.gif"
+      },
+      {
+        "id": "neon-pulse-sun-off",
+        "name": "Sun (Kapalı)",
+        "path": "assets/icons/sun_off.gif"
+      },
+      {
+        "id": "neon-pulse-sun-on",
+        "name": "Sun (Açık)",
+        "path": "assets/icons/sun_on.gif"
+      },
+      {
+        "id": "neon-pulse-target",
+        "name": "Target",
+        "path": "assets/icons/target.gif"
+      },
+      {
+        "id": "neon-pulse-terminal",
+        "name": "Terminal",
+        "path": "assets/icons/terminal.gif"
+      },
+      {
+        "id": "neon-pulse-trash",
+        "name": "Trash",
+        "path": "assets/icons/trash.gif"
+      },
+      {
+        "id": "neon-pulse-trophy",
+        "name": "Trophy",
+        "path": "assets/icons/trophy.gif"
+      },
+      {
+        "id": "neon-pulse-twitch",
+        "name": "Twitch",
+        "path": "assets/icons/twitch.gif"
+      },
+      {
+        "id": "neon-pulse-upload",
+        "name": "Upload",
+        "path": "assets/icons/upload.gif"
+      },
+      {
+        "id": "neon-pulse-volume-down",
+        "name": "Volume Down",
+        "path": "assets/icons/volume_down.gif"
+      },
+      {
+        "id": "neon-pulse-volume-off",
+        "name": "Volume (Kapalı)",
+        "path": "assets/icons/volume_off.gif"
+      },
+      {
+        "id": "neon-pulse-volume-on",
+        "name": "Volume (Açık)",
+        "path": "assets/icons/volume_on.gif"
+      },
+      {
+        "id": "neon-pulse-volume-up",
+        "name": "Volume Up",
+        "path": "assets/icons/volume_up.gif"
+      },
+      {
+        "id": "neon-pulse-wand",
+        "name": "Wand",
+        "path": "assets/icons/wand.gif"
+      },
+      {
+        "id": "neon-pulse-wifi-off",
+        "name": "Wifi (Kapalı)",
+        "path": "assets/icons/wifi_off.gif"
+      },
+      {
+        "id": "neon-pulse-wifi-on",
+        "name": "Wifi (Açık)",
+        "path": "assets/icons/wifi_on.gif"
+      },
+      {
+        "id": "neon-pulse-x",
+        "name": "X",
+        "path": "assets/icons/x.gif"
+      },
+      {
+        "id": "neon-pulse-youtube",
+        "name": "Youtube",
+        "path": "assets/icons/youtube.gif"
+      }
+    ],
+    "sounds": []
+  }
+}
